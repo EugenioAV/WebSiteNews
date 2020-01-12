@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>TechNews</title>
+
+    <link rel="stylesheet" href="{% static 'TechNews/css/main.css' %}">
+</head>
+<body>
+    <div class="main-block">
+        <p>Новости из мира технологий</p>
+    </div>
+    {% for item in articles %}
+        <a href="article/{{ item.id }}/">{{ item.title }}</a>
+    {% endfor %}
+</body>
+</html>
