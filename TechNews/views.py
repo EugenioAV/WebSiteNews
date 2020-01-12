@@ -7,7 +7,7 @@ class Home(View):
     data = dict()
 
     def get(self, request):
-        articles = Article.objects.all()
+        articles = Article.objects.all().order_by('date_input')
         self.data['articles'] = articles
 
         return render(request, 'index.html', self.data)

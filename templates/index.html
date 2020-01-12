@@ -11,8 +11,13 @@
     <div class="main-block">
         <p>Новости из мира технологий</p>
     </div>
-    {% for item in articles %}
-        <a href="article/{{ item.id }}/">{{ item.title }}</a>
-    {% endfor %}
+    <div class="articles">
+        {% for item in articles %}
+            <p class="line"></p>
+            <a href="article/{{ item.id }}/">{{ item.title }}</a>
+            <p>{{ item.date_input }}</p>
+        {% endfor %}
+
+    </div>
 </body>
 </html>
